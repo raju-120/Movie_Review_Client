@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const Footer = () => {
     return (
         <div>
-            <h3>Footer</h3>
+            <h2>This is footer</h2>
         </div>
     );
 };
