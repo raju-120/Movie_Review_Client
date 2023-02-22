@@ -16,5 +16,6 @@ module.exports = {
   plugins: [
     // include Flowbite as a plugin in your Tailwind CSS project
     require('flowbite/plugin')
+    
   ]
 }

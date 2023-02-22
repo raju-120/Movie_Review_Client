@@ -9,7 +9,7 @@ function App() {
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
   );
   const element = document.documentElement
-  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  /* const darkQuery = window.matchMedia("(prefers-color-scheme: dark)"); */
   
 
   const options = [
