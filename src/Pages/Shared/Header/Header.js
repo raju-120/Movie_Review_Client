@@ -5,7 +5,7 @@ import img from '../../../Assets/Images/logo.jpg';
 const Header = () => {
 
     const menuItems = <>
-        <li className='text-2xl'> <Link>Home</Link> </li>
+        <li className='text-2xl'> <Link to='/'>Home</Link> </li>
         <li className='text-2xl'> <Link to='/blog'>Blog</Link> </li>
         <li className='text-2xl'> <Link>Service</Link> </li>
         <li className='text-2xl'> <Link>Contact</Link> </li>
@@ -24,7 +24,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                     </div>
-                    <Link className="btn btn-ghost normal-case text-xl">
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">
                         <img src={img} style={{height: '50px'}} alt="" /> <span style={{marginLeft: '10px'}}>Movie-Review</span>
                     </Link>
                 </div>
