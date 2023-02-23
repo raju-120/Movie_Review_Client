@@ -6,8 +6,8 @@ const Header = () => {
 
     const menuItems = <>
         <li className='text-2xl'> <Link>Home</Link> </li>
+        <li className='text-2xl'> <Link to='/blog'>Blog</Link> </li>
         <li className='text-2xl'> <Link>Service</Link> </li>
-        <li className='text-2xl'> <Link>Blog</Link> </li>
         <li className='text-2xl'> <Link>Contact</Link> </li>
     </>
 

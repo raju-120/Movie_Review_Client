@@ -74,7 +74,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between rounded-xl">
-                    <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <Link href="https://flowbite.com/">Flowbite™</Link>. All Rights Reserved.
+                    <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 All Rights Reserved to hakunama-tata.
                     </span>
                     <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
                         <Link href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
