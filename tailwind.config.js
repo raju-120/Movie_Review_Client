@@ -13,9 +13,6 @@ module.exports = {
       // extend base Tailwind CSS utility classes
     }
   },
-  plugins: [
-    // include Flowbite as a plugin in your Tailwind CSS project
-    require('flowbite/plugin')
-    
+  plugins: [require("daisyui"),
   ]
 }
