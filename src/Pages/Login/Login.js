@@ -4,7 +4,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
     
-    /* const {userLogin} = useContext(AuthContext); 
+    const {userLogin} = useContext(AuthContext); 
 
     const handleLogin = (event) =>{
         event.preventDefault();
@@ -21,7 +21,7 @@ const Login = () => {
             console.log(currentUser)
         })
         .catch( err => console.error(err));
-    } */ 
+    } 
     return (
         <div>
             <div className="hero bg-base-200">
@@ -39,7 +39,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text text-gray-100 dark:text-gray-100">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" name='password' className="input input-bordered" />
+                                <input type="password" placeholder="password" name='password' className="input input-bordered" />
                                 <label className="label">
                                     <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
                                 </label>
