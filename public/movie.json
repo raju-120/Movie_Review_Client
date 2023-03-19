@@ -1,0 +1,302 @@
+[
+  {
+    "_id": "640f0662cb07b90c784b4830",
+    "movie_id": 1,
+    "movie_title": "John Wick: Chapter 3 - Parabellum",
+    "bigimg": "https://i.ibb.co/pdkSmf8/johnwicklg.jpg",
+    "img": "https://i.ibb.co/bB6XY4M/johnwick.jpg",
+    "cast": "Keanu Reeves, Halle Berry, Ian McShane etc.",
+    "Writer": "Derek Kolstad, Shay Hatten, Chris Collins, Marc Abrams.",
+    "director": "Chad Stahelski",
+    "rating": "7.4/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Crime, Thriller",
+    "description": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere."
+  },
+  {
+    "_id": "640f06626641ea49f1eb2fd9",
+    "movie_id": 2,
+    "movie_title": "The Batman",
+    "bigimg": "https://i.ibb.co/fSvvhdK/batmamLg.jpg",
+    "img": "https://i.ibb.co/CvjgZcS/batman.jpg",
+    "cast": "Robert Pattinson, Zoë Kravitz, Paul Dano, Jeffrey Wright etc.",
+    "Writer": "Matt Reeves, Peter Craig",
+    "director": "Matt Reeves",
+    "rating": "7.8/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Crime, Drama",
+    "description": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement."
+  },
+  {
+    "_id": "640f06626f29b4e9cc8c6ffb",
+    "movie_id": 3,
+    "movie_title": "The Adam Project",
+    "bigimg": "https://i.ibb.co/xzJkCXc/Adam-Projects-Lg.jpg",
+    "img": "https://i.ibb.co/HFdQ2gq/Adam-Projects.jpg",
+    "cast": "Ryan Reynolds, Walker Scobell, Mark Ruffalo, Jennifer Garner, Catherine Keener, Zoe Saldaña.",
+    "Writer": "Jonathan Tropper, T.S. Nowlin, Jennifer Flackett, Mark Levin",
+    "director": "Shawn Levy",
+    "rating": "6.7/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Adventure, Comedy",
+    "description": "After accidentally crash-landing in 2022, time-traveling fighter pilot Adam Reed teams up with his 12-year-old self for a mission to save the future."
+  },
+  {
+    "_id": "640f0662571637e85d38db4d",
+    "movie_id": 4,
+    "movie_title": "Deep Water",
+    "bigimg": "https://i.ibb.co/7SSqX4p/deepwater-Lg.jpg",
+    "img": "https://i.ibb.co/10jqY6g/deep-Water.jpg",
+    "cast": "Ben Affleck, Ana de Armas",
+    "Writer": "Zach Helm, Sam Levinson",
+    "director": "Adrian Lyne",
+    "rating": "5.4/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Mystery, Drama, Thriller",
+    "description": "A well-to-do husband who allows his wife to have affairs in order to avoid a divorce becomes a prime suspect in the disappearance of her lovers."
+  },
+  {
+    "_id": "640f0662e871dc27571fa7ba",
+    "movie_id": 5,
+    "movie_title": "Pathaan",
+    "bigimg": "https://i.ibb.co/vsrdyfD/pathaan-Lg.jpg",
+    "img": "https://i.ibb.co/CH6G5s5/pathaan.jpg",
+    "cast": "Shah Rukh Khan, Deepika Padukone, John Abraham, Dimple Kapadia, Ashutosh Rana",
+    "Writer": "Abbas Tyrewala",
+    "director": "Siddharth Anand",
+    "rating": "6.4/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Drama, Adventure",
+    "description": "An Indian spy takes on the leader of a group of mercenaries who have nefarious plans to target his homeland."
+  },
+  {
+    "_id": "640f066262f1bcff048e9695",
+    "movie_id": 6,
+    "movie_title": "Bullet Train",
+    "bigimg": "https://i.ibb.co/hFkdPKL/bullet-Train-Lg.jpg",
+    "img": "https://i.ibb.co/tHSYZBV/bullet-Train.jpg",
+    "cast": "Brad Pitt, Joey King, Aaron Taylor-Johnson",
+    "Writer": "Zak Olkewicz",
+    "director": "David Leitch",
+    "rating": "7.3/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Drama, Thriller",
+    "description": "Five assassins aboard a swiftly-moving bullet train find out that their missions have something in common."
+  },
+  {
+    "_id": "640f0662668cafe55ee3eb7b",
+    "movie_id": 7,
+    "movie_title": "The Gray Man",
+    "bigimg": "https://i.ibb.co/8YR9Vsb/grayman-Lg.jpg",
+    "img": "https://i.ibb.co/dBXkx3P/grayman.jpg",
+    "cast": "Ryan Gosling, Chris Evans, Ana de Armas",
+    "Writer": "Joe Russo, Christopher Markus, Stephen McFeely",
+    "director": "Joe Russo, Christopher Markus",
+    "rating": "6.5/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Thriller",
+    "description": "When the CIA's most skilled operative, whose true identity is known to none, accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, setting off a global manhunt by international assassins."
+  },
+  {
+    "_id": "640f0662c3e976f71068a91b",
+    "movie_id": 8,
+    "movie_title": "Top Gun: Maverick",
+    "bigimg": "https://i.ibb.co/r3YmFQX/topgunlg.png",
+    "img": "https://i.ibb.co/b5kWbfL/topgun.jpg",
+    "cast": "Tom Cruise, Miles Teller, Jennifer Connelly",
+    "Writer": "Ehren Kruger, Eric Warren Singer, Christopher McQuarrie",
+    "director": "Joseph Kosinski",
+    "rating": "8.3/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action , Drama",
+    "description": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it."
+  },
+  {
+    "_id": "640f0662d3be6584686c506f",
+    "movie_id": 9,
+    "movie_title": "Enola Holmes",
+    "bigimg": "https://i.ibb.co/y6M8bRY/enlolahomeslg.jpg",
+    "img": "https://i.ibb.co/FgS28SM/enlolahomes.jpg",
+    "cast": "Millie Bobby Brown, Sam Claflin, Henry Cavill",
+    "Writer": "Jack ThorneNancy SpringerArthur Conan Doyle",
+    "director": "Harry Bradbeer",
+    "rating": "6.6/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Crime, Adventure",
+    "description": "When Enola Holmes (Sherlock's teen sister) discovers her mother is missing, she endeavors to find her, becoming a super-sleuth in her own right as she outwits her famous brother and unravels a dangerous conspiracy."
+  },
+  {
+    "_id": "640f066249958e6996f6079f",
+    "movie_id": 10,
+    "movie_title": "Black Adam",
+    "bigimg": "https://i.ibb.co/F6mLvt3/blackadamlg.jpg",
+    "img": "https://i.ibb.co/2nhrv7D/blackadam.jpg",
+    "cast": "Dwayne Johnson, Aldis Hodge, Pierce Brosnan",
+    "Writer": "Adam Sztykiel, Rory Haines, Sohrab Noshirvani",
+    "director": "Jaume Collet-Serra",
+    "rating": "6.3/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Adventure, Fantasy",
+    "description": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods--and imprisoned just as quickly--Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world."
+  },
+  {
+    "_id": "640f06622299903bc5ca830b",
+    "movie_id": 11,
+    "movie_title": "Ant-Man and the Wasp: Quantumania",
+    "bigimg": "https://i.ibb.co/hRFTdgc/antman.jpg",
+    "img": "https://i.ibb.co/3WdJGt4/ant.jpg",
+    "cast": "Paul Rudd, Evangeline Lilly, Jonathan Majors",
+    "Writer": "Jeff LovenessStan LeeLarry Lieber",
+    "director": "\tPeyton Reed",
+    "rating": "6.5/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Adventure, Comedy",
+    "description": "Scott Lang and Hope Van Dyne, along with Hank Pym and Janet Van Dyne, explore the Quantum Realm, where they interact with strange creatures and embark on an adventure that goes beyond the limits of what they thought was possible."
+  },
+  {
+    "_id": "640f066298e7228f828f6871",
+    "movie_id": 12,
+    "movie_title": "Spider-Man: No Way Home",
+    "bigimg": "https://i.ibb.co/nb7q8x2/spidermanlg.jpg",
+    "img": "https://i.ibb.co/8Mz9bv4/spiderman.jpg",
+    "cast": "Tom Holland, Zendaya, Benedict Cumberbatch",
+    "Writer": "Chris McKenna, Erik Sommers, Stan Lee",
+    "director": "Jon Watts",
+    "rating": "8.2/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Adventure, Fantasy",
+    "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+  },
+  {
+    "_id": "640f0662b7b45b014fe4df67",
+    "movie_id": 13,
+    "movie_title": "Ambulance",
+    "bigimg": "https://i.ibb.co/cQkyGQf/ambulance-Lg.jpg",
+    "img": "https://i.ibb.co/mB8JWk6/Ambulance.jpg",
+    "cast": "Jake Gyllenhaal, Yahya Abdul-Mateen II, Eiza González",
+    "Writer": "Chris FedakLaurits, Munch-PetersenLars, Andreas Pedersen",
+    "director": "Michael Bay",
+    "rating": "6.1/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Crime, Drama",
+    "description": "Two robbers steal an ambulance after their heist goes awry."
+  },
+  {
+    "_id": "640f06623f455671c5b3dc1e",
+    "movie_id": 14,
+    "movie_title": "Puss in Boots: The Last Wish",
+    "bigimg": "https://i.ibb.co/MSQ8WLt/pussinbootslg.jpg",
+    "img": "https://i.ibb.co/k6HWGzp/pussinboots.jpg",
+    "cast": "Antonio Banderas, Salma Hayek Pinault, Harvey Guillén",
+    "Writer": "Paul Fisher, Tommy Swerdlow, Tom Wheeler",
+    "director": "Joel Crawford",
+    "rating": "7.9/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Animation, Adventure, Comedy",
+    "description": "When Puss in Boots discovers that his passion for adventure has taken its toll and he has burned through eight of his nine lives, he launches an epic journey to restore them by finding the mythical Last Wish."
+  },
+  {
+    "_id": "640f06627406bd0568e1cae4",
+    "movie_id": 15,
+    "movie_title": "Thor: Love and Thunder",
+    "bigimg": "https://i.ibb.co/tPz3gP2/thorLg.png",
+    "img": "https://i.ibb.co/DpHzbsF/thor.jpg",
+    "cast": "Chris Hemsworth, Christian Bale, Tessa Thompson",
+    "Writer": "Taika Waititi, Jennifer Kaytin Robinson",
+    "director": "Taika Waititi",
+    "rating": "6.3/10",
+    "reviews": [
+      {
+        "userName": "",
+        "comments": "",
+        "email": ""
+      }
+    ],
+    "genres": "Action, Adventure, Comedy",
+    "description": "Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct."
+  }
+]

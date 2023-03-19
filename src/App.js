@@ -42,7 +42,7 @@ function App() {
   return (
     <section className='min-h-screen pt-8 dark:text-gray-100 dark:bg-slate-900 duration-100'>
         
-        <div className='fixed top-5 right-10 duration-100 dark:bg-slate-800 bg-gray-100 rounded'>
+        <div className='absolute top-2 right-10 duration-100 dark:bg-slate-800 bg-gray-100 rounded'>
           
           {
             options?.map((opt) => (

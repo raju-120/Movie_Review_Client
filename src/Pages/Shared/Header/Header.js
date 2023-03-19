@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../Assets/Images/logo.jpg';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+    const {user,  logOut} = useContext(AuthContext);
+
+    const handleSignOut = () =>{
+        logOut()
+        .then()
+        .catch();
+    }
 
     const menuItems = <>
         <li className='text-2xl'> <Link to='/'>Home</Link> </li>
@@ -34,13 +43,59 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login' className="btn btn-outline btn-primary mr-5">Login</Link>
-                    <Link to='/signup' className="btn btn-success">Register</Link>
+                    {
+                        user?.email ?
+                        <>
+                            <Link to='/login' className="mr-5">
+                                <button onClick={handleSignOut} className='btn btn-outline btn-primary'>LogOut</button>
+                            </Link>
+                        </>
+                        :
+                        <Link to='/login' className="btn btn-outline btn-primary mr-5">Login</Link>
+                    }
+                    {
+                        user?.email ?
+                        <>
+                            {/* <Link to='/' className="btn btn-success"></Link> */}
+                            <div className="dropdown">
+                                <label tabIndex={0} className="m-1  btn btn-info">Profile</label>
+                                <ul tabIndex={0} className="dropdown-content menu p-2  shadow bg-base-100 rounded-box w-24">
+                                    <li><Link>Item 1</Link></li>
+                                    <li><Link>Item 2</Link></li>
+                                </ul>
+                            </div>
+                        </>
+                        :
+                        <Link to='/signup' className="btn btn-success">Register</Link>
+                    }
                 </div>
                 
             </div>
         </div>
     );
 };
+
+/* 
+{
+    _id: '{{objectId()}}',
+    movie_id: "",
+    movie_title: "",
+    bigimg : "",
+    img : "",
+    cast: "",
+    Writer:"",
+    director: "",
+    rating: "",
+    reviews: [
+      {
+        userName:"",
+        comments: "",
+        email:""
+      }
+    ],
+    genres: "",
+    description:""
+  },
+ */
 
 export default Header;
