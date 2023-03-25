@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import MoviesCard from './MoviesCard';
 
 const MovieServices = () => {
@@ -6,7 +7,7 @@ const MovieServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect( () =>{
-        fetch('http://localhost:5000/reviews')
+        fetch('http://localhost:5000/reviewsList')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
@@ -24,6 +25,9 @@ const MovieServices = () => {
                     
                 </MoviesCard>)}
             </div>
+            <Link to='/allmovies'>
+                <button className="btn btn-outline btn-accent text-xl">See All</button>
+            </Link>
         </div>
     );
 };
