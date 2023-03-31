@@ -1,6 +1,5 @@
 [
   {
-    "_id": "640f0662cb07b90c784b4830",
     "movie_id": 1,
     "movie_title": "John Wick: Chapter 3 - Parabellum",
     "bigimg": "https://i.ibb.co/pdkSmf8/johnwicklg.jpg",
@@ -20,7 +19,6 @@
     "description": "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere."
   },
   {
-    "_id": "640f06626641ea49f1eb2fd9",
     "movie_id": 2,
     "movie_title": "The Batman",
     "bigimg": "https://i.ibb.co/fSvvhdK/batmamLg.jpg",
@@ -40,7 +38,6 @@
     "description": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement."
   },
   {
-    "_id": "640f06626f29b4e9cc8c6ffb",
     "movie_id": 3,
     "movie_title": "The Adam Project",
     "bigimg": "https://i.ibb.co/xzJkCXc/Adam-Projects-Lg.jpg",
@@ -60,7 +57,6 @@
     "description": "After accidentally crash-landing in 2022, time-traveling fighter pilot Adam Reed teams up with his 12-year-old self for a mission to save the future."
   },
   {
-    "_id": "640f0662571637e85d38db4d",
     "movie_id": 4,
     "movie_title": "Deep Water",
     "bigimg": "https://i.ibb.co/7SSqX4p/deepwater-Lg.jpg",
@@ -80,7 +76,6 @@
     "description": "A well-to-do husband who allows his wife to have affairs in order to avoid a divorce becomes a prime suspect in the disappearance of her lovers."
   },
   {
-    "_id": "640f0662e871dc27571fa7ba",
     "movie_id": 5,
     "movie_title": "Pathaan",
     "bigimg": "https://i.ibb.co/vsrdyfD/pathaan-Lg.jpg",
@@ -100,7 +95,6 @@
     "description": "An Indian spy takes on the leader of a group of mercenaries who have nefarious plans to target his homeland."
   },
   {
-    "_id": "640f066262f1bcff048e9695",
     "movie_id": 6,
     "movie_title": "Bullet Train",
     "bigimg": "https://i.ibb.co/hFkdPKL/bullet-Train-Lg.jpg",
@@ -120,7 +114,6 @@
     "description": "Five assassins aboard a swiftly-moving bullet train find out that their missions have something in common."
   },
   {
-    "_id": "640f0662668cafe55ee3eb7b",
     "movie_id": 7,
     "movie_title": "The Gray Man",
     "bigimg": "https://i.ibb.co/8YR9Vsb/grayman-Lg.jpg",
@@ -140,7 +133,6 @@
     "description": "When the CIA's most skilled operative, whose true identity is known to none, accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, setting off a global manhunt by international assassins."
   },
   {
-    "_id": "640f0662c3e976f71068a91b",
     "movie_id": 8,
     "movie_title": "Top Gun: Maverick",
     "bigimg": "https://i.ibb.co/r3YmFQX/topgunlg.png",
@@ -160,7 +152,6 @@
     "description": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it."
   },
   {
-    "_id": "640f0662d3be6584686c506f",
     "movie_id": 9,
     "movie_title": "Enola Holmes",
     "bigimg": "https://i.ibb.co/y6M8bRY/enlolahomeslg.jpg",
@@ -180,7 +171,6 @@
     "description": "When Enola Holmes (Sherlock's teen sister) discovers her mother is missing, she endeavors to find her, becoming a super-sleuth in her own right as she outwits her famous brother and unravels a dangerous conspiracy."
   },
   {
-    "_id": "640f066249958e6996f6079f",
     "movie_id": 10,
     "movie_title": "Black Adam",
     "bigimg": "https://i.ibb.co/F6mLvt3/blackadamlg.jpg",
@@ -200,7 +190,6 @@
     "description": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods--and imprisoned just as quickly--Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world."
   },
   {
-    "_id": "640f06622299903bc5ca830b",
     "movie_id": 11,
     "movie_title": "Ant-Man and the Wasp: Quantumania",
     "bigimg": "https://i.ibb.co/hRFTdgc/antman.jpg",
@@ -220,7 +209,6 @@
     "description": "Scott Lang and Hope Van Dyne, along with Hank Pym and Janet Van Dyne, explore the Quantum Realm, where they interact with strange creatures and embark on an adventure that goes beyond the limits of what they thought was possible."
   },
   {
-    "_id": "640f066298e7228f828f6871",
     "movie_id": 12,
     "movie_title": "Spider-Man: No Way Home",
     "bigimg": "https://i.ibb.co/nb7q8x2/spidermanlg.jpg",
@@ -240,7 +228,6 @@
     "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
   },
   {
-    "_id": "640f0662b7b45b014fe4df67",
     "movie_id": 13,
     "movie_title": "Ambulance",
     "bigimg": "https://i.ibb.co/cQkyGQf/ambulance-Lg.jpg",
@@ -260,7 +247,6 @@
     "description": "Two robbers steal an ambulance after their heist goes awry."
   },
   {
-    "_id": "640f06623f455671c5b3dc1e",
     "movie_id": 14,
     "movie_title": "Puss in Boots: The Last Wish",
     "bigimg": "https://i.ibb.co/MSQ8WLt/pussinbootslg.jpg",
@@ -280,7 +266,6 @@
     "description": "When Puss in Boots discovers that his passion for adventure has taken its toll and he has burned through eight of his nine lives, he launches an epic journey to restore them by finding the mythical Last Wish."
   },
   {
-    "_id": "640f06627406bd0568e1cae4",
     "movie_id": 15,
     "movie_title": "Thor: Love and Thunder",
     "bigimg": "https://i.ibb.co/tPz3gP2/thorLg.png",

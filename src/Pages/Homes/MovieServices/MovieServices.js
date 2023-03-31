@@ -7,7 +7,7 @@ const MovieServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect( () =>{
-        fetch('http://localhost:5000/reviewsList')
+        fetch('http://localhost:5000/reviewLists')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
@@ -25,9 +25,9 @@ const MovieServices = () => {
                     
                 </MoviesCard>)}
             </div>
-            <Link to='/allmovies'>
+            {/* <Link to='/allmovies'>
                 <button className="btn btn-outline btn-accent text-xl">See All</button>
-            </Link>
+            </Link> */}
         </div>
     );
 };
