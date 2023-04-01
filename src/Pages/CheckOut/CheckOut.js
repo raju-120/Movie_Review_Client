@@ -1,27 +1,39 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
+import Comments from '../Comments/Comments';
 
 const CheckOut = () => {
     const {_id, movie_title, img, cast, director, 
-        Writer, rating, reviews,genres,description} = useLoaderData()
+        Writer, rating,genres,description} = useLoaderData();
+
+        /* useEffect( ({reviews}) =>{
+            fetch('')
+            .then(res => res.json())
+            .then(data => console.log(data))
+        }, [{reviews}]) */
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-xl">
-                <figure>
-                    <img className='rounded-lg ml-5 px-5 py-5' src={img} alt="Movie" style={{width: '500px', height: '600px'}}/>
-                    </figure>
-                <div className="card-body">
-                    <h2 className="card-title text-5xl" style={{color: 'yellow'}}>{movie_title}</h2>
-                    <h2 className="card-title mt-2">Cast: {cast}</h2>
-                    <h2 className="card-title ">Director: {director}</h2>
-                    <h2 className="card-title ">Writer: {Writer}</h2>
-                    <h2 className="card-title ">Genres: {genres}</h2>
-                    <h2 className="card-title ">IMDB Rating:<span style={{color: 'yellow'}}>  <FaStar /> </span>{rating}</h2>
-                    <h2 className="card-title ">Description: {description}</h2>
+            <div className="hero bg-base-200 rounded-2xl">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left">
+                        <h1 className="text-4xl font-bold mb-3" style={{color: 'yellow'}}>{movie_title}</h1>
+                        <h3 className="text-2xl mb-2">Cast: <span style={{color: 'aqua'}}>{cast}</span></h3>
+                        <h3 className="text-xl mb-2">Director: {director}</h3>
+                        <h3 className="text-xl mb-2">Writer: {Writer}</h3>
+                        <h3 className="text-xl mb-2">Genres: {genres}</h3>
+                        <h2 className="card-title ">IMDB Rating:<span style={{color: 'yellow'}}>  <FaStar /> </span>{rating}</h2>
+                        <p className="py-6">Description: {description}</p>
+                    </div>
+                    <div className="card  w-3/5  shadow-2xl bg-base-100">
+                        <img className='rounded-lg' src={img} alt="" />
+                    </div>
                 </div>
             </div>
-            {reviews.length()}
+            <hr />
+            <h2 className='mt-5 mb-5 text-4xl' style={{color: 'ghostWhite'}}>Reviews About This Movie</h2>
+            <hr />
+            <Comments key={_id}></Comments>
         </div>
     );
 };
