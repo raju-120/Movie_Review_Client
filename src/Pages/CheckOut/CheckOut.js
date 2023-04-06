@@ -1,17 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
-import Comments from '../Comments/Comments';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const CheckOut = () => {
-    const {_id, movie_title, img, cast, director, 
+    
+    const {user} = useContext(AuthContext);
+    const { _id, movie_title, img, cast, director, 
         Writer, rating,genres,description} = useLoaderData();
 
-        /* useEffect( ({reviews}) =>{
-            fetch('')
-            .then(res => res.json())
-            .then(data => console.log(data))
-        }, [{reviews}]) */
+    const handleComments = (event)=>{
+        event.preventDefault();
+        const form = event.target;
+        const email = user?.email || 'unRegistered';
+        const massage = form.commentBox.value;
+
+        const comments = {
+            service : _id,
+            serviceName : movie_title,
+            email,
+            massage
+        }
+        fetch('http://localhost:5000/comments', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(comments)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledged)
+            {
+                form.reset();
+                alert('Your Opinion Post Successfully');
+            }
+        })
+        .catch(err => console.error(err));
+    }
     return (
         <div>
             <div className="hero bg-base-200 rounded-2xl">
@@ -33,9 +60,29 @@ const CheckOut = () => {
             <hr />
             <h2 className='mt-5 mb-5 text-4xl' style={{color: 'ghostWhite'}}>Reviews About This Movie</h2>
             <hr />
-            <Comments key={_id}></Comments>
+
+            <div className=" mt-5">
+                <div className="card  w-2/5  bg-base-100">
+                    <form onSubmit={handleComments} className="card-body">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Your  Email</span>
+                            </label>
+                            <input type="text" name='email' placeholder="email" className="input input-bordered" defaultValue={user?.email} />
+                        </div>
+                        <div className="form-control">
+                            {/* <!-- lg --> */}
+                            <textarea placeholder="Comment Box" name='commentBox' className="textarea textarea-bordered textarea-lg w-full" required></textarea>
+                        </div>
+                        <div className="form-control mt-6">
+                            <button className="btn btn-primary">Comments</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     );
+    
 };
 
 export default CheckOut;

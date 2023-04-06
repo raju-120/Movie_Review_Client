@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import MyComments from "../Pages/MyComment/MyComments";
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/mycomments',
+                element: <MyComments></MyComments>
             },
             {
                 path: '/checkout/:id',

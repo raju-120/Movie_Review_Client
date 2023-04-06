@@ -15,9 +15,9 @@ const Header = () => {
 
     const menuItems = <>
         <li className='text-2xl'> <Link to='/'>Home</Link> </li>
+        <li className='text-2xl'> <Link to='mycomments'>Comments</Link> </li>
         <li className='text-2xl'> <Link to='/blog'>Blog</Link> </li>
-        <li className='text-2xl'> <Link>Service</Link> </li>
-        <li className='text-2xl'> <Link>Contact</Link> </li>
+        
     </>
 
     
