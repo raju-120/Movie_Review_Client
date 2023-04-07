@@ -1,19 +1,34 @@
 import React, { useEffect, useState } from 'react';
 
 const Comments = ({comment}) => {
-    const {serviceName, email, massage, service} = comment;
+    const {_id,serviceName, email, massage, service} = comment;
     const [commentService, setCommentService] = useState({});
 
+
+    //import img 
     useEffect( ()=>{
         fetch(`http://localhost:5000/reviewLists/${service}`)
         .then(res => res.json())
         .then(data => setCommentService(data))
-    },[service])
+    },[service]);
+
+    const handleDelete = _id =>{
+        const proceed = window.confirm('Are You sure, You want to delete your review?');
+        if(proceed){
+            fetch(`http://localhost:5000/comments/${_id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+            })
+        }
+    }
     return (
         <tr>
             <th>
                 <label>
-                    <button className='btn btn-warning'>X</button>
+                    <button onCanPlay={() =>handleDelete(_id)} className='btn btn-warning'>X</button>
                 </label>
             </th>
             <td>

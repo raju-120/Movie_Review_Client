@@ -7,6 +7,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import MyComments from "../Pages/MyComment/MyComments";
+import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
 
 
@@ -34,11 +35,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mycomments',
-                element: <MyComments></MyComments>
+                element: <PrivateRoutes><MyComments></MyComments></PrivateRoutes>
             },
             {
                 path: '/checkout/:id',
-                element: <CheckOut></CheckOut>,
+                element: <PrivateRoutes><CheckOut></CheckOut>,</PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/reviewLists/${params.id}`)
             }
             
