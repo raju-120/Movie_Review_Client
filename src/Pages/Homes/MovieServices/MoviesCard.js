@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const MoviesCard = ({service}) => {
     const {_id, movie_title, img, rating} = service;
@@ -7,7 +8,14 @@ const MoviesCard = ({service}) => {
         <div>
             <div className="card w-96 bg-base-300 shadow-3xl" style={{marginLeft: '40px'}}>
                 <figure>
-                    <img className='rounded-lg' src={img} alt="Shoes" style={{height: '35em'}} />
+                    <PhotoProvider>
+                        <div className="foo">
+                            <PhotoView >
+                                    <img src={img} alt="" style={{height: '35em'}}/>
+                            </PhotoView>
+                        </div>
+                    </PhotoProvider>
+                    {/* <img className='rounded-lg' src={img} alt="Shoes" style={{height: '35em'}} /> */}
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title" style={{color: 'orange'}}>{movie_title}</h2>

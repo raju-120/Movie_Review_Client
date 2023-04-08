@@ -68,7 +68,7 @@ const CheckOut = () => {
                             <label className="label">
                                 <span className="label-text">Your  Email</span>
                             </label>
-                            <input type="text" name='email' placeholder="email" className="input input-bordered" defaultValue={user?.email} />
+                            <input type="text" name='email' placeholder="email" className="input input-bordered" defaultValue={user?.email} readOnly/>
                         </div>
                         <div className="form-control">
                             {/* <!-- lg --> */}

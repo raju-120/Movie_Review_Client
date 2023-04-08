@@ -9,7 +9,13 @@ const MovieServices = () => {
         fetch('http://localhost:5000/reviewLists?limit=true')
         .then(res => res.json())
         .then(data => setServices(data))
-    }, [])
+    }, []);
+
+    const handleSeeALL = () =>{
+            fetch('http://localhost:5000/reviewLists')
+            .then(res => res.json())
+            .then(data => setServices(data))  
+    } 
 
     return (
         <div>
@@ -24,9 +30,9 @@ const MovieServices = () => {
                     
                 </MoviesCard>)}
             </div>
-            {/* <button>See All
-                fetch()
-            </button> */}
+            <button onClick={handleSeeALL} className='btn btn-outline btn-success'>
+                See All
+            </button> 
             
         </div>
     );

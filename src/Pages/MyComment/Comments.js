@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
-const Comments = ({comment}) => {
+const Comments = ({comment, handleDelete}) => {
     const {_id,serviceName, email, massage, service} = comment;
+    const {user} = useContext(AuthContext);
     const [commentService, setCommentService] = useState({});
 
 
@@ -12,23 +14,38 @@ const Comments = ({comment}) => {
         .then(data => setCommentService(data))
     },[service]);
 
-    const handleDelete = _id =>{
-        const proceed = window.confirm('Are You sure, You want to delete your review?');
-        if(proceed){
-            fetch(`http://localhost:5000/comments/${_id}`, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data =>{
-                console.log(data);
-            })
+    const handleUpdate =(event, _id) =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = user?.email || 'unRegistered';
+        const updateComment = form.commentBox.value;
+
+        const update ={
+            _id,
+            email, 
+            updateComment
         }
+        fetch(`http://localhost:5000/comments/${_id}`,{
+            method: 'PUT',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(update)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
     }
+
+    /* const handleCancel = () =>{
+        <h2>Hi there</h2>
+    } */
+
+    
     return (
         <tr>
             <th>
                 <label>
-                    <button onCanPlay={() =>handleDelete(_id)} className='btn btn-warning'>X</button>
+                    <button onClick={() =>handleDelete(_id)} className='btn btn-warning'>X</button>
                 </label>
             </th>
             <td>
@@ -51,8 +68,37 @@ const Comments = ({comment}) => {
                 {email}
             </td>
             <td>{massage}</td>
+
+            {/* Update Pop-Up Modal */}
             <th>
-                <button className="btn btn-ghost btn-xs">Edit</button>
+                <label htmlFor="my-modal" className="btn btn-outline">Edit</label>
+
+                {/* Put this part before </body> tag */}
+                <input type="checkbox" id="my-modal" className="modal-toggle" />
+                <div className="modal">
+                    <div className="modal-box">
+                        {/* <button onClick={handleCancel} className="btn btn-outline btn-warning">
+                            close
+                        </button> */}
+                       
+                        <form onSubmit={(event)=>handleUpdate(event, _id)} className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Update</span>
+                                </label>
+                                <input type="text" name='email' placeholder="email" className="input input-bordered" defaultValue={user?.email} readOnly/>
+                            </div>
+                            <div className="form-control">
+                                
+                                <textarea placeholder="Comment Box" name='commentBox' className="textarea textarea-bordered textarea-lg w-full" required></textarea>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
             </th>
         </tr>
     );

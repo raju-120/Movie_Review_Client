@@ -15,7 +15,25 @@ const MyComments = () => {
         fetch(`http://localhost:5000/comments?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setComments(data))
-    }, [user?.email])
+    }, [user?.email]);
+
+    const handleDelete = id =>{
+        const proceed = window.confirm('Are you sure that, you want to delete review?');
+        if(proceed){
+            fetch(`http://localhost:5000/comments/${id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+                if(data.acknowledged > 0){
+                    alert('deleted successfully');
+                    const remaining = myComments.filter(cmt => cmt._id !== id);
+                    setComments(remaining);
+                }
+            })
+        }
+    }
 
     return (
         <div>
@@ -38,6 +56,7 @@ const MyComments = () => {
                             myComments.map(comment => <Comments
                             key={comment._id}
                             comment = {comment}
+                            handleDelete={handleDelete}
                             ></Comments>)
                         } 
                     </tbody>
