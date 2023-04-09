@@ -14,11 +14,11 @@
 * React Icon
 * React Query
 
-## Backend
 
-*Nodejs
-*ExpressJs
-*MongoDb for data-base
-*Json Web Token
-*Vercel(for API)
+## Backend
+* Nodejs
+* ExpressJs
+* MongoDb for data-base
+* Json Web Token
+* Vercel(for API)
 
