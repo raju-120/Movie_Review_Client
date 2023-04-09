@@ -23,7 +23,21 @@ const Login = () => {
                 email: user.email,
             }
             console.log(currentUser);
-            navigate(from, {replace: true});
+            //JWT
+            fetch('https://movie-review-server.vercel.app/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type' : 'application/json'
+                },
+                body: JSON.stringify(currentUser)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                localStorage.setItem('review-token', data.token);
+                navigate(from, {replace: true});
+            })
+            
         })
         .catch( err => console.error(err));
     } 
@@ -33,6 +47,15 @@ const Login = () => {
         .then( result =>{
             const user = result.user;
             console.log(user);
+
+            //JWT
+            /* fetch('https://movie-review-server.vercel.app/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type' : 'application/json'
+                },
+                body: JSON.stringify()
+            }) */
             navigate(from, {replace: true})
         })
         .catch(err => console.error(err));

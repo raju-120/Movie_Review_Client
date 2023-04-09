@@ -6,13 +6,13 @@ const MovieServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect( () =>{
-        fetch('http://localhost:5000/reviewLists?limit=true')
+        fetch('https://movie-review-server.vercel.app/reviewLists?limit=true')
         .then(res => res.json())
         .then(data => setServices(data))
     }, []);
 
     const handleSeeALL = () =>{
-            fetch('http://localhost:5000/reviewLists')
+            fetch('https://movie-review-server.vercel.app/reviewLists')
             .then(res => res.json())
             .then(data => setServices(data))  
     } 

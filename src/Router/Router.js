@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <PrivateRoutes><CheckOut></CheckOut>,</PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/reviewLists/${params.id}`)
+                loader: ({params}) => fetch(`https://movie-review-server.vercel.app/reviewLists/${params.id}`)
             }
             
         ]

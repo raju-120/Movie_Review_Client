@@ -21,7 +21,7 @@ const CheckOut = () => {
             email,
             massage
         }
-        fetch('http://localhost:5000/comments', {
+        fetch('https://movie-review-server.vercel.app/comments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -9,7 +9,7 @@ const Comments = ({comment, handleDelete}) => {
 
     //import img 
     useEffect( ()=>{
-        fetch(`http://localhost:5000/reviewLists/${service}`)
+        fetch(`https://movie-review-server.vercel.app/reviewLists/${service}`)
         .then(res => res.json())
         .then(data => setCommentService(data))
     },[service]);
@@ -21,11 +21,11 @@ const Comments = ({comment, handleDelete}) => {
         const updateComment = form.commentBox.value;
 
         const update ={
-            _id,
+            
             email, 
             updateComment
         }
-        fetch(`http://localhost:5000/comments/${_id}`,{
+        fetch(`https://movie-review-server.vercel.app/comments/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -33,12 +33,21 @@ const Comments = ({comment, handleDelete}) => {
             body: JSON.stringify(update)
         })
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data =>{ 
+            console.log(data)
+            if(data.acknowledged)
+            {
+                //form.window.closed();
+                alert('Your Comment Updated');
+                form.reset();
+            }
+        });
     }
 
-    /* const handleCancel = () =>{
-        <h2>Hi there</h2>
-    } */
+    const handleCancel = (event) =>{
+        event.preventDefault();
+        
+    } 
 
     
     return (
@@ -77,14 +86,14 @@ const Comments = ({comment, handleDelete}) => {
                 <input type="checkbox" id="my-modal" className="modal-toggle" />
                 <div className="modal">
                     <div className="modal-box">
-                        {/* <button onClick={handleCancel} className="btn btn-outline btn-warning">
-                            close
-                        </button> */}
+                        <button onClick={handleCancel} className="btn btn-circle btn-outline btn-warning">
+                            X
+                        </button> 
                        
                         <form onSubmit={(event)=>handleUpdate(event, _id)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Update</span>
+                                    <span className="label-text">Update Your Comment</span>
                                 </label>
                                 <input type="text" name='email' placeholder="email" className="input input-bordered" defaultValue={user?.email} readOnly/>
                             </div>

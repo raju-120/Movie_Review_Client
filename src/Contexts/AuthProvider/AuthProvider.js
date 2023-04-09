@@ -21,6 +21,7 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
     const logOut = () =>{
+        localStorage.removeItem('review-token');
         return signOut(auth); 
     }
 

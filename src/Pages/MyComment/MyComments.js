@@ -5,22 +5,31 @@ import Comments from './Comments';
 
 
 const MyComments = () => {
-    const {user} = useContext(AuthContext);
+    const {user, logOut} = useContext(AuthContext);
     const [myComments, setComments] = useState([]);
 
     useEffect(() =>{
         if(!user?.email){
             return;
         }
-        fetch(`http://localhost:5000/comments?email=${user?.email}`)
-        .then(res => res.json())
+        fetch(`https://movie-review-server.vercel.app/comments?email=${user?.email}`,{
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('review-token')}`
+            }
+        })
+        .then(res => {
+            if(res.status === 401 || res.status === 403){
+                return logOut();
+            }
+            return res.json()
+        })
         .then(data => setComments(data))
-    }, [user?.email]);
+    }, [user?.email , logOut]);
 
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure that, you want to delete review?');
         if(proceed){
-            fetch(`http://localhost:5000/comments/${id}`, {
+            fetch(`https://movie-review-server.vercel.app/comments/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

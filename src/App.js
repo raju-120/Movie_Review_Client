@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
 import router from './Router/Router';
 
 function App() {
 
-  const [theme, setTheme] = useState(
+ /*  const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
   );
   const element = document.documentElement;
@@ -38,9 +38,9 @@ function App() {
         
     }
   } , [theme]);
-
+ */
   return (
-    <section className='min-h-screen pt-8 dark:text-gray-100 dark:bg-slate-900 duration-100'>
+   /*  <section className='min-h-screen pt-8 dark:text-gray-100 dark:bg-slate-900 duration-100'>
         
         <div className='absolute top-2 right-10 duration-100 dark:bg-slate-800 bg-gray-100 rounded'>
           
@@ -64,7 +64,13 @@ function App() {
 
           </RouterProvider>
       </div>
-    </section>
+    </section> */
+    
+    <div className="text-center p-5">
+      <RouterProvider router={router}>
+
+      </RouterProvider>
+    </div>
   );
 }
 
