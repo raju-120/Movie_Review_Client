@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link,  useLocation, useNavigate  } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/'; 
 
     const handleLogin = (event) =>{
         event.preventDefault();
@@ -46,10 +46,26 @@ const Login = () => {
         googleSignIn()
         .then( result =>{
             const user = result.user;
+            const currentUser ={
+                email: user.email,
+            }
             console.log(user);
+            fetch('https://movie-review-server.vercel.app/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type' : 'application/json'
+                },
+                body: JSON.stringify(currentUser)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                localStorage.setItem('review-token', data.token);
+                navigate(from, {replace: true});
+            })
 
             
-            navigate(from, {replace: true})
+            //navigate(from, {replace: true})
         })
         .catch(err => console.error(err));
     }
@@ -91,4 +107,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Login; 
