@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, googleSignIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
 
 
     const handleSingUp = (event) =>{
@@ -17,6 +21,18 @@ const SignUp = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+        })
+        .catch(err => console.error(err));
+    }
+
+    const handleGoogleSignIn = () =>{
+        googleSignIn()
+        .then( result =>{
+            const user = result.user;
+            console.log(user);
+
+            
+            navigate(from, {replace: true})
         })
         .catch(err => console.error(err));
     }
@@ -45,7 +61,7 @@ const SignUp = () => {
                             </div>
                             <Link className=" mt-2">
                                 <p className='mb-2  text-gray-100 dark:text-gray-100'>Login with others application?</p>
-                                <button className="btn btn-outline btn-secondary">Google</button>
+                                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-secondary">Google</button>
                             
                             </Link>
                         </form>

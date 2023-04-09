@@ -48,14 +48,7 @@ const Login = () => {
             const user = result.user;
             console.log(user);
 
-            //JWT
-            /* fetch('https://movie-review-server.vercel.app/jwt', {
-                method: 'POST',
-                headers: {
-                    'content-type' : 'application/json'
-                },
-                body: JSON.stringify()
-            }) */
+            
             navigate(from, {replace: true})
         })
         .catch(err => console.error(err));
