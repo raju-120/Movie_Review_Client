@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import Comments from './Comments';
+import useTitle from '../../hooks/useTitle';
 
 
 
 const MyComments = () => {
     const {user, logOut} = useContext(AuthContext);
     const [myComments, setComments] = useState([]);
+    useTitle('Comment');
 
     useEffect(() =>{
         if(!user?.email){

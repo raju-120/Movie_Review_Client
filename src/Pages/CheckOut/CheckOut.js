@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const CheckOut = () => {
     
     const {user} = useContext(AuthContext);
     const { _id, movie_title, img, cast, director, 
         Writer, rating,genres,description} = useLoaderData();
+    useTitle('CheckOut');
 
     const handleComments = (event)=>{
         event.preventDefault();
