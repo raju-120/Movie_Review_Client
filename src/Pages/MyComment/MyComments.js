@@ -46,6 +46,36 @@ const MyComments = () => {
         }
     }
 
+    const handleUpdate =(event, _id) =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = user?.email || 'unRegistered';
+        const updateComment = form.commentBox.value;
+
+        const update ={
+            
+            email, 
+            updateComment
+        }
+        fetch(`https://movie-review-server.vercel.app/comments/${_id}`,{
+            method: 'PUT',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(update)
+        })
+        .then(res => res.json())
+        .then(data =>{ 
+            console.log(data)
+            if(data.acknowledged)
+            {
+                //form.window.closed();
+                alert('Your Comment Updated');
+                form.reset();
+            }
+        });
+    }
+
     return (
         <div>
             <h2>You have: {myComments.length} Data</h2>
@@ -68,6 +98,7 @@ const MyComments = () => {
                             key={comment._id}
                             comment = {comment}
                             handleDelete={handleDelete}
+                            handleUpdate={handleUpdate}
                             ></Comments>)
                         } 
                     </tbody>
