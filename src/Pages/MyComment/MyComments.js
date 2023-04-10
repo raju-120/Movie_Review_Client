@@ -71,6 +71,7 @@ const MyComments = () => {
             {
                 //form.window.closed();
                 alert('Your Comment Updated');
+                //setComments();
                 form.reset();
             }
         });
